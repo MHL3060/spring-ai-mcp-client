@@ -1,0 +1,15 @@
+spring.application.name: mcp-client
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+    mcp.client:
+      enabled: true
+      name: popeye-mcp-client
+      request-timeout: 30s
+      type: async
+      sse:
+        connections:
+          server1.url: http://localhost:8081
+server:
+  port: 8080
